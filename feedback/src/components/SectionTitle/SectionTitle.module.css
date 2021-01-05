@@ -1,0 +1,9 @@
+.sectionTitle {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 500;
+}
