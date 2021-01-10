@@ -1,10 +1,9 @@
 import React from "react";
-import styles from "./Notification.module.css";
 
-const Notification = (props) => {
+const Notification = ({ message }) => {
   return (
-    <div className={styles.message}>
-      <p>{props.message}</p>
+    <div>
+      <p>{message}</p>
     </div>
   );
 };

@@ -1,13 +1,20 @@
 import React from "react";
-import styles from "./FeedbackOptions.module.css";
+import Section from "../Section.jsx";
 
-const FeedbackOptions = () => {
+const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <div className={styles.buttons}>
-      <button className={styles.button}>Good</button>
-      <button className={styles.button}>Neutral</button>
-      <button className={styles.button}>Bad</button>
-    </div>
+    <Section title="Please leave feedback">
+      {options.map((option) => (
+        <button
+          key={option}
+          type="button"
+          name={option}
+          onClick={onLeaveFeedback}
+        >
+          {option}
+        </button>
+      ))}
+    </Section>
   );
 };
 
