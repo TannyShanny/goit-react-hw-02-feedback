@@ -1,5 +1,6 @@
 import React from "react";
 import Section from "../Section.jsx";
+import PropTypes from "prop-types";
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
@@ -16,6 +17,11 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
       ))}
     </Section>
   );
+};
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.array.isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
 };
 
 export default FeedbackOptions;

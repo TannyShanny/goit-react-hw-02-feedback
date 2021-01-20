@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Statistics.module.css";
 import Section from "../Section";
+import PropTypes from "prop-types";
 
 const Statistics = (props) => {
   return (
@@ -15,6 +16,14 @@ const Statistics = (props) => {
       </p>
     </Section>
   );
+};
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentege: PropTypes.number.isRequired,
 };
 
 export default Statistics;
